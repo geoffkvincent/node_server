@@ -13,7 +13,15 @@ passport.use(
       callbackURL: '/auth/google/callback'
     }, 
     (accessToken, refreshToken, profile, done) => {
-      new User({ googleId: profile.id }).save()
+      User.findOne({ googleId: profile.id })
+        .then( (existingUser) => {
+          if (existingUser) {
+            //already have user with that id
+          } else {
+            //we dont have one
+            new User({ googleId: profile.id }).save()
+          }
+        })
     }
   )
 )
