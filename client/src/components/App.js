@@ -1,12 +1,16 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-const Home = () => <h1>Home</h1>
+import Landing from './Landing'
+import Dashboard from './Dashboard'
+import SurveyForm from './SurveyForm'
+import Navbar from './Navbar'
 
 const App = () => {
   return (
     <Router>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/' component={Landing} />
+      <Route path='/surveys' component={Dashboard} />
+      <Route path='/survey/new' component={SurveyForm} />
     </Router>
   )
 }
