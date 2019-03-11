@@ -1,4 +1,4 @@
-import React from 'react'
+import  React, {Fragment}  from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 import Landing from './Landing'
@@ -8,14 +8,14 @@ import Navbar from './Navbar'
 
 const App = () => {
   return (
-    <Container>
+    <Fragment>
       <Switch>
         <Navbar />
         <Route exact path='/' component={Landing} />
         <Route exact path='/surveys' component={Dashboard} />
         <Route exact path='/survey/new' component={SurveyForm} />
       </Switch>
-    </Container>
+    </Fragment>
   )
 }
 
