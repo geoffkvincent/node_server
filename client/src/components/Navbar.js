@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import {Menu} from 'semantic-ui-react'
 
 class Navbar extends React.Component {
@@ -6,10 +7,14 @@ class Navbar extends React.Component {
     return (
       <Menu size='huge'>
         <Menu.Item>
-          Nav
+          <NavLink to='/dashboard'>
+            Nav
+          </NavLink>
         </Menu.Item>
         <Menu.Item position='right'>
-          Login with Google
+          <NavLink to=''>
+            Login with Google
+          </NavLink>
         </Menu.Item>
       </Menu>
     )
