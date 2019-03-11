@@ -8,9 +8,10 @@ import Navbar from './Navbar'
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Route exact path='/' component={Landing} />
-      <Route path='/surveys' component={Dashboard} />
-      <Route path='/survey/new' component={SurveyForm} />
+      <Route exact path='/surveys' component={Dashboard} />
+      <Route exact path='/survey/new' component={SurveyForm} />
     </Router>
   )
 }
