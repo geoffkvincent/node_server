@@ -11,12 +11,12 @@ class Navbar extends React.Component {
         return
       case false:
         return (
-          <NavLink to=''>
+          <NavLink to='/auth/google'>
             Login with Google
           </NavLink>
         )
       default:
-        return 'Log Out'
+        return 'Logout'
     }
   }
 
