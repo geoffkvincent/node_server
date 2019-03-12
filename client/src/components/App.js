@@ -6,19 +6,21 @@ import Dashboard from './Dashboard'
 import SurveyForm from './SurveyForm'
 import Navbar from './Navbar'
 
-const App = () => {
-  return (
-    <Fragment>
-      <Navbar />
-      <Container>
-        <Switch>
-          <Route exact path='/' component={Landing} />
-          <Route exact path='/surveys' component={Dashboard} />
-          <Route exact path='/survey/new' component={SurveyForm} />
-        </Switch>
-      </Container>
-    </Fragment>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <Fragment>
+        <Navbar />
+        <Container>
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/surveys' component={Dashboard} />
+            <Route exact path='/survey/new' component={SurveyForm} />
+          </Switch>
+        </Container>
+      </Fragment>
+    )
+  }
 }
 
 export default App
