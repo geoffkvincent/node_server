@@ -9,10 +9,10 @@ export const fetchUser = () => {
   }
 }
 
-export default ( state = {}, action ) => {
+export default ( state = null, action ) => {
   switch(action.type) {
     case FETCH_USER:
-      return action.auth
+      return action.auth || false
     default:
       return state
   }
