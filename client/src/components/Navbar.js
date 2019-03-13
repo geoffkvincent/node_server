@@ -16,7 +16,11 @@ class Navbar extends React.Component {
           </NavLink>
         )
       default:
-        return 'Logout'
+          return (
+            <NavLink to='/api/logout'>
+              Logout
+            </NavLink>
+          )
     }
   }
 
