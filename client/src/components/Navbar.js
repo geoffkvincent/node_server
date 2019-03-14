@@ -21,10 +21,15 @@ class Navbar extends React.Component {
   }
 
   render() {
+    const { auth } = this.props
     return (
       <Menu size='huge'>
         <Menu.Item>
+          <NavLink 
+            to={ auth ? '/surveys' : '/' }
+          >
             Emaily
+          </NavLink>
         </Menu.Item>
         <Menu.Item position='right'>
           {this.renderContent()}
