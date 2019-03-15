@@ -17,6 +17,9 @@ class Navbar extends React.Component {
       default:
           return [
             <Menu.Item key='1'><Payments /></Menu.Item>,
+            <Menu.Item key='3'>
+              Credits: {this.props.auth.credits}
+            </Menu.Item>,
             <Menu.Item key='2'><a href='/api/logout'>Logout</a></Menu.Item>
           ]
     }
