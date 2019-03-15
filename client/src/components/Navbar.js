@@ -7,7 +7,8 @@ import Payments from './Payments'
 class Navbar extends React.Component {
 
   renderContent() {
-    switch(this.props.auth) {
+    const { auth } = this.props
+    switch(auth) {
       case null:
         return
       case false:
@@ -18,7 +19,7 @@ class Navbar extends React.Component {
           return [
             <Menu.Item key='1'><Payments /></Menu.Item>,
             <Menu.Item key='3'>
-              Credits: {this.props.auth.credits}
+              Credits: {auth.credits}
             </Menu.Item>,
             <Menu.Item key='2'><a href='/api/logout'>Logout</a></Menu.Item>
           ]
