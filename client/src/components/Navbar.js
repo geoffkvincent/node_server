@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Menu } from 'semantic-ui-react'
+import Payments from './Payments'
 
 class Navbar extends React.Component {
 
@@ -11,12 +12,13 @@ class Navbar extends React.Component {
         return
       case false:
         return (
-          <a href='/auth/google'>Login with Google</a>
+          <Menu.Item><a href='/auth/google'>Login with Google</a></Menu.Item>
         )
       default:
-          return (
-            <a href='/api/logout'>Logout</a>
-          )
+          return [
+            <Menu.Item><Payments /></Menu.Item>,
+            <Menu.Item><a href='/api/logout'>Logout</a></Menu.Item>
+          ]
     }
   }
 
