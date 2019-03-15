@@ -1,5 +1,7 @@
 import React from 'react'
 import StripeCheckout from 'react-stripe-checkout'
+import {connect} from 'react-redux'
+import { handleToken } from '../reducers/auth'
 import {Button} from 'semantic-ui-react'
 
 class Payments extends React.Component {
@@ -18,4 +20,4 @@ class Payments extends React.Component {
   }
 }
 
-export default Payments
+export default connect()(Payments)
