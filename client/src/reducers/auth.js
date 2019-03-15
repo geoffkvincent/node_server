@@ -1,11 +1,19 @@
 import axios from 'axios'
 
 const FETCH_USER = 'FETCH_USER'
+const HANDLE_TOKEN = 'HANDLE_TOKEN'
 
 export const fetchUser = () => {
   return (dispatch) => {
     axios.get('/api/current_user')
     .then (({data}) => dispatch({type: FETCH_USER, auth: data}))
+  }
+}
+
+export const handleToken = (token) => {
+  return (dispatch) => {
+    axios.post('/api/stripe', token)
+    .then( ({data}) => dispatch({ type: HANDLE_TOKEN, auth: data}))
   }
 }
 
