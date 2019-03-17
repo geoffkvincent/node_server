@@ -26,7 +26,6 @@ class Navbar extends React.Component {
     }
   }
 
-
   render() {
     const { auth } = this.props
     return (
