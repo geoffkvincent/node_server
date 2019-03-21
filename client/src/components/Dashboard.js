@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Icon, Container, Header } from 'semantic-ui-react'
+import { Icon, Container, Header } from 'semantic-ui-react'
 
 class Dashboard extends React.Component {
   render() {
