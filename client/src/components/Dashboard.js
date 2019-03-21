@@ -5,7 +5,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Container>
-        <Header></Header>Dashboard
+        <Header>Dashboard</Header>
         <Icon name='plus square outline' size='huge'/>
       </Container>
     )
