@@ -7,7 +7,7 @@ class Dashboard extends React.Component {
     return (
       <Container>
         <Header as='h1'>Dashboard</Header>
-        <Link to='/surveys/new'>
+        <Link to='/survey/new'>
           <Icon name='plus square outline' size='huge'/>
         </Link>
       </Container>
