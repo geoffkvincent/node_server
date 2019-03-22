@@ -6,7 +6,7 @@ import {fetchUser} from '../reducers/auth'
 import { Container } from 'semantic-ui-react'
 import Landing from './Landing'
 import Dashboard from './Dashboard'
-import SurveyForm from './SurveyForm'
+import SurveyNew from './surveys/SurveyNew'
 import Navbar from './Navbar'
 
 class App extends React.Component {
@@ -23,7 +23,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/' component={Landing} />
               <Route exact path='/surveys' component={Dashboard} />
-              <Route exact path='/survey/new' component={SurveyForm} />
+              <Route exact path='/survey/new' component={SurveyNew} />
             </Switch>
           </Container>
         </Fragment>

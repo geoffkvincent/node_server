@@ -1,6 +1,6 @@
 import React from 'react'
 
-class SurveyForm extends React.Component {
+class SurveyNew extends React.Component {
   render() {
     return (
       <div>Form</div>
@@ -8,4 +8,4 @@ class SurveyForm extends React.Component {
   }
 }
 
-export default SurveyForm
+export default SurveyNew
