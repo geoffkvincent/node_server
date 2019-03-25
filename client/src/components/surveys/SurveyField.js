@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default () => (
-  <div>
-    Survey Field
-  </div>
-)
+export default () => {
+  return (
+    <div>
+      Survey Field
+    </div>
+  )
+}

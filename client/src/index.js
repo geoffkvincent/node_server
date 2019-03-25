@@ -5,9 +5,6 @@ import store from './store'
 import 'semantic-ui-css/semantic.min.css'
 import App from './components/App'
 
-import axios from 'axios'
-window.axios = axios
-
 ReactDOM.render(
     <Provider store={store}>
       <App />
