@@ -1,12 +1,14 @@
 import React from 'react'
 import { reduxForm, Field } from 'redux-form'
+import { Form } from 'semantic-ui-react'
 
 class SurveyForm extends React.Component {
   render() {
     return (
-      <div>
+      <Form>
         <Field type="text" name="surveyTitle" component="input" />
-      </div>
+        <Form.Button>Submit</Form.Button>
+      </Form>
     )
   }
 }
